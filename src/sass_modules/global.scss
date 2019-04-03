@@ -1,9 +1,24 @@
-html{
+html,body{
   box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  //background: $body-bg;
+}
+
+h1{
+  font-family: 'Merriweather';
+}
+
+p{
+  font-family: 'Roboto', sans-serif;
 }
 
 .container {
   max-width: 800px;
   width: 100%;
   margin: 0 auto;
+}
+.container-sm {
+  @extend .container;
+  max-width: 250px;
 }

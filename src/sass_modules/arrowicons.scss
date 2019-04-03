@@ -1,0 +1,22 @@
+.arrow-icons {
+  background: $secondary-color;
+  div{
+    @extend .container-sm;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0;     
+  }
+ 
+  i{
+    cursor: pointer;
+  }  
+}
+
+.arrow-icons-inverse {
+  @extend .arrow-icons;
+  background: $primary-color;
+  i{
+    color:$primary-font;
+  }
+}
