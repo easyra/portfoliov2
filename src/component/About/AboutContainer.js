@@ -8,7 +8,6 @@ class AboutContainer extends Component {
         <div className='about-content'>
           <div>
             <h1>Software Developer</h1>
-            <p>Hi! I'm Ezra Davis. And I’m a problem solver.</p>
             <p>
               I have been a problem solver ever since I’ve been able to type on
               a keyboard. Hope we can work together and make something great!
