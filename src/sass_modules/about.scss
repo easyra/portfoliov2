@@ -10,10 +10,11 @@
     @extend .container;
     display: flex;
     justify-content: space-between;
-    //align-items: center;
-    h1{
-    color:$about-title;
-    font-size: 48px;
+    align-items: center;
+    h2{
+      font-family: 'Merriweather';
+      color:$about-title;
+      font-size: 48px;
     }
     p{
       max-width: 500px;
