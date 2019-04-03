@@ -1,0 +1,36 @@
+header {
+  background: $header-bg;
+  padding: 15px;
+  nav {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-content: center;
+    justify-content: space-between; 
+    text-transform: uppercase;
+    .nav-items {
+      display: flex;
+      align-items: center;
+
+      a {
+        color: $nav-items;
+        font-family: 'Roboto', sans-serif;
+        transition: all;
+        padding: 10px 10px;
+
+        cursor: pointer;
+        &:hover {
+          transform: scale(1.1);
+        }
+        
+      }
+    }
+  }
+  //Nav Bar Title
+  h1 {
+    color: $nav-items;
+    font-size: 36px;
+    font-family: 'Merriweather';
+  }
+}

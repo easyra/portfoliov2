@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './sass_modules/index.scss';
 import { AppContainer } from './reducer';
 import { createMuiTheme } from '@material-ui/core/styles';
 
