@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
-import { NavBar, AboutContainer, ArrowIcons } from '../reducer';
+import {
+  NavBar,
+  AboutContainer,
+  ArrowIcons,
+  ProjectsContainer
+} from '../reducer';
 import { Route, Switch, Redirect } from 'react-router-dom';
 
 class AppContainer extends Component {
@@ -19,6 +24,13 @@ class AppContainer extends Component {
             path='/about'
             render={() => (
               <AboutContainer pagesHash={pagesHash} pages={pages} />
+            )}
+          />
+          <Route
+            strict
+            path='/projects'
+            render={() => (
+              <ProjectsContainer pagesHash={pagesHash} pages={pages} />
             )}
           />
           <Route

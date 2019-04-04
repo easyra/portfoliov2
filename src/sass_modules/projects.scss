@@ -1,0 +1,22 @@
+.projects {
+  padding: 200px 0;
+  background: $projects-bg;
+  .projects-content {
+    @extend .container;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .projects-card{
+      max-width: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      img {
+       width: 100%;
+      }
+    }
+  }
+
+  
+}
