@@ -1,22 +1,25 @@
 import React from 'react';
-import AppBar from '@material-ui/core/AppBar';
-import Typography from '@material-ui/core/Typography';
-import Toolbar from '@material-ui/core/Toolbar';
-import Button from '@material-ui/core/Button';
+import { withRouter, NavLink } from 'react-router-dom';
 
-const Navbar = props => {
+const Navbar = () => {
   return (
     <header>
       <nav>
         <h1>Ezra Davis</h1>
         <div className='nav-items'>
-          <a>About</a>
-          <a>Projects</a>
-          <a>Contact</a>
+          <NavLink activeClassName='selected' to='/about'>
+            About
+          </NavLink>
+          <NavLink activeClassName='selected' to='/projects'>
+            Projects
+          </NavLink>
+          <NavLink activeClassName='selected' to='/contact'>
+            Contact
+          </NavLink>
         </div>
       </nav>
     </header>
   );
 };
 
-export default Navbar;
+export default withRouter(Navbar);
