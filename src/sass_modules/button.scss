@@ -2,13 +2,14 @@
   cursor: pointer;
   margin: 15px 0;
   padding: 8px;
-  width: 75px;
+  display: inline-block;
   background: $secondary-color;
   color: $secondary-font;
   font-size: 24px;
   border-radius: 2px;
   transition: all 0.2s;
   font-weight: bold;
+  width: 75px;
   &:hover {
     font-weight: bold;
     transform: scale(1.1)
