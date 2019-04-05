@@ -7,19 +7,16 @@ class ArrowIcons extends Component {
       this.moveLeft();
     } else if (e.keyCode && e.keyCode === 39) {
       this.moveRight();
-      console.log('hi');
     }
   };
   moveLeft = () => {
     const { title, history, pages, pagesHash } = this.props;
-    const index =
-      pagesHash[title] - 1 > -1 ? pagesHash[title] - 1 : pagesHash.last;
+    const index = pagesHash[title] > 0 ? pagesHash[title] - 1 : pagesHash.last;
     history.push(`/${pages[index]}`);
   };
   moveRight = () => {
     const { title, history, pages, pagesHash } = this.props;
-    const index =
-      pagesHash[title] + 1 < pagesHash.last ? pagesHash[title] + 1 : 0;
+    const index = pagesHash[title] < pagesHash.last ? pagesHash[title] + 1 : 0;
     history.push(`/${pages[index]}`);
   };
   render() {
@@ -43,6 +40,10 @@ class ArrowIcons extends Component {
   componentDidMount() {
     const element = document.querySelector('body');
     element.addEventListener('keyup', this.handleKeyup);
+  }
+  componentWillUnmount() {
+    const element = document.querySelector('body');
+    element.removeEventListener('keyup', this.handleKeyup);
   }
 }
 

@@ -4,11 +4,13 @@ import AboutContainer from './component/About/AboutContainer.js';
 import ProfilePic from './component/reuseable/ProfilePic.js';
 import ArrowIcons from './component/reuseable/ArrrowIcons.js';
 import ProjectsContainer from './component/Projects/ProjectsContainer.js';
+import ContactContainer from './component/Contact/ContactContainer.js';
 export {
   AppContainer,
   NavBar,
   AboutContainer,
   ProfilePic,
   ArrowIcons,
-  ProjectsContainer
+  ProjectsContainer,
+  ContactContainer
 };

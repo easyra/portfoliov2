@@ -1,0 +1,53 @@
+.contact {
+  padding: 100px 0;
+  background: $contact-bg;
+  .contact-content {
+    @extend .container;
+    display: flex;
+    h2{
+      font-family: 'Merriweather';
+      color:$about-title;
+      font-size: 48px;
+    }
+    h4{
+      margin: 15px 0 0 0;
+      font-weight: bold;
+      color: $primary-font;
+    }
+    .contact-inputs{      
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 400px;
+      input,textarea {
+        margin: 10px 0 0 0;
+        width: 275px;
+      }
+      textarea {
+        height: 200px;
+        width: 300px;
+      }
+    }
+    .contact-links {
+           
+      width: 360px;
+      h2 {
+        font-size: 46px;
+        margin: 0 0 15px 0;
+      }
+      div {
+        background: $secondary-color;
+        padding: 50px 20px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        i{
+        color:$secondary-font;
+      }
+      }
+    }
+
+  }
+}
