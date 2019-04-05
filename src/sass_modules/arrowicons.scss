@@ -1,6 +1,9 @@
 .arrow-icons {
   background: $secondary-color;
-  
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+
   div{
     @extend .container-sm;
     display: flex;
