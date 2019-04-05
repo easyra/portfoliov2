@@ -43,8 +43,13 @@
         justify-content: space-around;
         align-items: center;
         flex-wrap: wrap;
+        
         i{
-        color:$secondary-font;
+          transition: color 0.2s;
+          color:$secondary-font;
+         &:hover{
+            color: $primary-font;
+          }
       }
       }
     }
