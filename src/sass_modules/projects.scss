@@ -1,22 +1,70 @@
 .projects {
-  padding: 200px 0;
+  padding: 50px 0;
   background: $projects-bg;
   .projects-content {
     @extend .container;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    .projects-card{
-      max-width: 300px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+    flex-direction: column;
+    h2 {
+      font-family: 'Merriweather';
+      color: $projects-title;
+      margin: 15px 0;
+      font-size: 48px;
+    }
 
-      img {
-       width: 100%;
+    .projects-summary {
+      .projects-card {
+        display: flex;
+        justify-content: space-between;
+        img {
+          width: 66%;
+        }
+      }
+      .projects-links {
+        display: flex;
+        flex-direction: column;
+        i{
+          transition: color 0.2s;
+          color:$secondary-font;
+         &:hover{
+            color: $primary-font;
+          }
+      }
+      }
+      p{
+        color: $primary-font;
+        margin: 15px 0;
+        font-size: 16px;
+      }
+    }
+
+    .projects-titles {
+      display: flex;
+      justify-content: space-around;
+      h4 {
+        font-family: 'Merriweather';
+        color: $projects-title;
+        margin: 15px 0 15px 0;
+        font-size: 16px;
       }
     }
   }
 
-  
+  //Button changes
+  .btn {
+    width: auto;
+    background: $primary-color;
+  }
+  .btn-active {
+    @extend .btn;
+  }
+  .btn-active {
+    width: auto;
+    &:hover {
+      transform: none;
+    }
+    background: $secondary-color;
+  }
 }
