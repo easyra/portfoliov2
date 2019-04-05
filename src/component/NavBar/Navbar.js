@@ -5,7 +5,6 @@ const Navbar = () => {
   return (
     <header>
       <nav>
-        <h1>Ezra Davis</h1>
         <div className='nav-items'>
           <NavLink activeClassName='selected' to='/about'>
             About

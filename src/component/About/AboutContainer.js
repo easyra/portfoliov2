@@ -9,7 +9,7 @@ class AboutContainer extends Component {
         <section class='about'>
           <div className='about-content'>
             <div>
-              <h2>Software Developer</h2>
+              <h1>Ezra Davis</h1>
               <p>
                 I have been a problem solver ever since I’ve been able to type
                 on a keyboard. Hope we can work together and make something
