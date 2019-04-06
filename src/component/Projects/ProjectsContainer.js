@@ -53,8 +53,8 @@ class ProjectsContainer extends Component {
             {activeProject === 0 && (
               <ProjectsSummary
                 src='https://i.imgur.com/eT2NrrM.png'
-                github=''
-                deployed=''
+                github='https://github.com/Lambda-School-Labs/Labs8-DeveloperMap'
+                deployed='https://www.mappajob.com/'
                 projectTitle='MappaJob'
                 summary='    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
               />
@@ -62,8 +62,8 @@ class ProjectsContainer extends Component {
             {activeProject === 1 && (
               <ProjectsSummary
                 src='https://i.imgur.com/OSya4oR.png'
-                github=''
-                deployed=''
+                github='https://github.com/easyra/coding-class-showcase'
+                deployed='https://showcase-projects.netlify.com/'
                 projectTitle='Showcase'
                 summary='    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
               />
@@ -71,8 +71,8 @@ class ProjectsContainer extends Component {
             {activeProject === 2 && (
               <ProjectsSummary
                 src='https://i.imgur.com/TPdivrC.png'
-                github=''
-                deployed=''
+                github='https://github.com/easyra/back-end-project-week'
+                deployed='https://lambdanotes-ezra.netlify.com/notes'
                 projectTitle='LambdaNotes'
                 summary='    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
               />
