@@ -10,15 +10,54 @@ class ArrowIcons extends Component {
     }
   };
   moveLeft = () => {
-    const { title, history, pages, pagesHash } = this.props;
+    const {
+      title,
+      history,
+      pages,
+      pagesHash,
+      activeProject,
+      changeFromContactPage
+    } = this.props;
+    if (activeProject !== undefined && this.moveProject('left')) {
+      return;
+    }
     const index = pagesHash[title] > 0 ? pagesHash[title] - 1 : pagesHash.last;
+
+    //Allows React to show the third project when coming from the contact page
+    if (
+      changeFromContactPage &&
+      title === 'contact' &&
+      pages[index] === 'projects'
+    ) {
+      changeFromContactPage(true);
+    }
     history.push(`/${pages[index]}`);
   };
   moveRight = () => {
-    const { title, history, pages, pagesHash } = this.props;
+    const { title, history, pages, pagesHash, activeProject } = this.props;
+    if (activeProject !== undefined && this.moveProject('right')) {
+      return;
+    }
     const index = pagesHash[title] < pagesHash.last ? pagesHash[title] + 1 : 0;
     history.push(`/${pages[index]}`);
   };
+  moveProject = direction => {
+    const { activeProject, changeProject } = this.props;
+    if (direction === 'left') {
+      if (activeProject !== 0) {
+        changeProject(-1);
+        return true;
+      }
+    }
+    if (direction === 'right') {
+      if (activeProject !== 2) {
+        changeProject(1);
+        return true;
+      }
+    }
+    return false;
+  };
+
   render() {
     const { title, history } = this.props;
 
@@ -44,6 +83,10 @@ class ArrowIcons extends Component {
   componentWillUnmount() {
     const element = document.querySelector('body');
     element.removeEventListener('keyup', this.handleKeyup);
+    const { changeFromContactPage } = this.props;
+    if (changeFromContactPage) {
+      changeFromContactPage(false);
+    }
   }
 }
 

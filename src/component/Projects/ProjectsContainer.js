@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ProfilePic, ArrowIcons } from '../../reducer';
+import { ProfilePic, ArrowIcons, ProjectsSummary } from '../../reducer';
 
 class ProjectsContainer extends Component {
   state = {
@@ -9,6 +9,15 @@ class ProjectsContainer extends Component {
   handleClick = e => {
     const activeProject = parseInt(e.target.getAttribute('data-id'));
     this.setState({ activeProject });
+  };
+  changeProject = n => {
+    const activeProject = this.state.activeProject + n;
+    this.setState({ activeProject });
+  };
+  componentWillMount = () => {
+    if (this.props.fromContactPage) {
+      this.setState({ activeProject: 2 });
+    }
   };
 
   render() {
@@ -41,26 +50,33 @@ class ProjectsContainer extends Component {
                 Lambda Notes
               </h4>
             </div>
-            <div className='projects-summary'>
-              <div className='projects-card'>
-                <img src='https://i.imgur.com/eT2NrrM.png' />
-                <div className='projects-links'>
-                  <i class='fab fa-github fa-8x' />
-                  <i class='fas fa-window-maximize fa-8x' />
-                </div>
-              </div>
-              <h2>MappaJob</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                tellus purus, pharetra non feugiat quis, luctus sit amet felis.
-                Donec sed fringilla enim, nec maximus libero. Nam vitae gravida
-                urna, ac dapibus mi. Suspendisse purus ex, molestie sed ex nec,
-                congue laoreet magna. Fusce fermentum, leo nec commodo
-                tincidunt, sapien erat cursus sem, sed semper odio diam et mi.
-                Aliquam ornare vitae nunc a mollis. Nullam ac faucibus nunc, ut
-                mattis augue.
-              </p>
-            </div>
+            {activeProject === 0 && (
+              <ProjectsSummary
+                src='https://i.imgur.com/eT2NrrM.png'
+                github=''
+                deployed=''
+                projectTitle='MappaJob'
+                summary='    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+              />
+            )}
+            {activeProject === 1 && (
+              <ProjectsSummary
+                src='https://i.imgur.com/OSya4oR.png'
+                github=''
+                deployed=''
+                projectTitle='Showcase'
+                summary='    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+              />
+            )}
+            {activeProject === 2 && (
+              <ProjectsSummary
+                src='https://i.imgur.com/TPdivrC.png'
+                github=''
+                deployed=''
+                projectTitle='LambdaNotes'
+                summary='    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+              />
+            )}
 
             {/* <div className='projects-card'>
               <img src='https://i.imgur.com/eT2NrrM.png' />
@@ -76,7 +92,13 @@ class ProjectsContainer extends Component {
             </div> */}
           </div>
         </section>
-        <ArrowIcons title='projects' pages={pages} pagesHash={pagesHash} />
+        <ArrowIcons
+          title='projects'
+          pages={pages}
+          pagesHash={pagesHash}
+          activeProject={activeProject}
+          changeProject={this.changeProject}
+        />
       </>
     );
   }

@@ -5,6 +5,7 @@ import ProfilePic from './component/reuseable/ProfilePic.js';
 import ArrowIcons from './component/reuseable/ArrrowIcons.js';
 import ProjectsContainer from './component/Projects/ProjectsContainer.js';
 import ContactContainer from './component/Contact/ContactContainer.js';
+import ProjectsSummary from './component/Projects/ProjectsSummary.js';
 export {
   AppContainer,
   NavBar,
@@ -12,5 +13,6 @@ export {
   ProfilePic,
   ArrowIcons,
   ProjectsContainer,
-  ContactContainer
+  ContactContainer,
+  ProjectsSummary
 };

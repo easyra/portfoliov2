@@ -20,7 +20,7 @@ class ContactContainer extends Component {
     }
   };
   render() {
-    const { pages, pagesHash } = this.props;
+    const { pages, pagesHash, changeFromContactPage } = this.props;
     const { nameInput, emailInput, subjectInput, messageInput } = this.state;
     return (
       <>
@@ -96,7 +96,12 @@ class ContactContainer extends Component {
             </div>
           </div>
         </section>
-        <ArrowIcons title='contact' pages={pages} pagesHash={pagesHash} />
+        <ArrowIcons
+          title='contact'
+          pages={pages}
+          pagesHash={pagesHash}
+          changeFromContactPage={changeFromContactPage}
+        />
       </>
     );
   }
