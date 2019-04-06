@@ -3,6 +3,7 @@
   background: $projects-bg;
   .projects-content {
     @extend .container;
+    max-width: 600px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
