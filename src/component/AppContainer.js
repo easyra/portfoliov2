@@ -63,7 +63,7 @@ class AppContainer extends Component {
               <AboutContainer pagesHash={pagesHash} pages={pages} />
             )}
           />
-          <Redirect to='/' />
+          <Redirect to='/about' />
         </Switch>
       </>
     );
