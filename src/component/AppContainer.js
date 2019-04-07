@@ -55,14 +55,6 @@ class AppContainer extends Component {
               />
             )}
           />
-          <Route
-            strict
-            exact
-            path='/'
-            render={() => (
-              <AboutContainer pagesHash={pagesHash} pages={pages} />
-            )}
-          />
           <Redirect to='/about' />
         </Switch>
       </>
