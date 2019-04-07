@@ -66,11 +66,12 @@ class ArrowIcons extends Component {
         <div>
           <i
             onClick={this.moveLeft}
-            class='fas fa-arrow-alt-circle-left fa-6x'
+            class='fas fa-arrow-alt-circle-left fa-2x'
           />
+          <h6>Use the arrow keys to move around pages</h6>
           <i
             onClick={this.moveRight}
-            class='fas fa-arrow-alt-circle-right fa-6x'
+            class='fas fa-arrow-alt-circle-right fa-2x'
           />
         </div>
       </div>

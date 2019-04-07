@@ -1,8 +1,10 @@
 .arrow-icons {
-  background: $secondary-color;
+  background: $arrow-color;
   position: absolute;
   width: 100%;
   bottom: 0;
+  display: flex;
+  color: $primary-font;
 
   div{
     @extend .container-sm;
@@ -15,6 +17,10 @@
   i{
     cursor: pointer;
   }  
+  h6{
+    font-family: 'Roboto', sans-serif;
+
+  }
 }
 
 .arrow-icons-inverse {
@@ -22,5 +28,6 @@
   background: $primary-color;
   i{
     color:$primary-font;
+    transition: transform 0.2s;
   }
 }
