@@ -56,7 +56,9 @@ class ProjectsContainer extends Component {
                 github='https://github.com/Lambda-School-Labs/Labs8-DeveloperMap'
                 deployed='https://www.mappajob.com/'
                 projectTitle='MappaJob'
-                summary='    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+                summary=''
+                summary='MappaJob is a map-based application geared towards helping job seekers find employers and vice-versa in a specific geographic area. This project was created by a team of four using a FERN stack consisting of the technologies: Firebase, Express.js, React, and Node.js. My responsibilities involved work in the both the front-end and back-end of this projects. Some of these responsibilities include designing a maintainable backend REST API, Implementing reusable React Components for interactive user experience, reviewing contributions and pull requests for the project and more.
+                '
               />
             )}
             {activeProject === 1 && (
@@ -65,7 +67,7 @@ class ProjectsContainer extends Component {
                 github='https://github.com/easyra/coding-class-showcase'
                 deployed='https://showcase-projects.netlify.com/'
                 projectTitle='Showcase'
-                summary='    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+                summary='Showcase is a web application meant to allow teachers to display their students projects publicly to the internet. Teachers are able to create rooms that where students can post information about their project. The information then gets turned into a card the represents all that information about the projects. I created this project using Firebase and React.js.'
               />
             )}
             {activeProject === 2 && (
@@ -74,7 +76,7 @@ class ProjectsContainer extends Component {
                 github='https://github.com/easyra/back-end-project-week'
                 deployed='https://lambdanotes-ezra.netlify.com/notes'
                 projectTitle='LambdaNotes'
-                summary='    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+                summary='Lambda Notes is a note taking application that allows users to organize their information in an efficient manner. Users are able to post notes to a REST API and have those notes be displayed for everyone to see. Lambda Notes also has other features that create a more enjoyable experience for users such as support for premade themes, tagging support for notes, and the ability to search by note title or tag. I created this project using Reactjs, SQLite, Nodejs, and Expressjs. '
               />
             )}
 
