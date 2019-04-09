@@ -23,7 +23,7 @@ class AboutModal extends Component {
             always been it’s greatest pull. Being able to do just that
             professionally is something I’ll never regret working towards. If
             anyone reading this sees hears the voice of someone willing to give
-            it there all, I hope we can work together and build something great.
+            it there all, I hope we can work together and build something great!
             You can view my projects in Accomplishment section down below or on
             my portfolio site here.
           </p>
