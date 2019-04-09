@@ -6,10 +6,12 @@ import ArrowIcons from './component/reuseable/ArrrowIcons.js';
 import ProjectsContainer from './component/Projects/ProjectsContainer.js';
 import ContactContainer from './component/Contact/ContactContainer.js';
 import ProjectsSummary from './component/Projects/ProjectsSummary.js';
+import AboutModal from './component/About/AboutModal.js';
 export {
   AppContainer,
   NavBar,
   AboutContainer,
+  AboutModal,
   ProfilePic,
   ArrowIcons,
   ProjectsContainer,
