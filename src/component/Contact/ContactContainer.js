@@ -75,7 +75,7 @@ class ContactContainer extends Component {
                   />
                 </div>
                 <div>
-                  <h4>City:</h4>
+                  <h4>Subject:</h4>
                   <input
                     placeholder='ex: Interested in working with you!'
                     name='subjectInput'
