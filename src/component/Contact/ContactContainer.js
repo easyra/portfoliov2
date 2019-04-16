@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { ArrowIcons } from '../../reducer';
 import { Link } from 'react-router-dom';
+const nodemailer = require('nodemailer');
 
 class ContactContainer extends Component {
   state = {
@@ -16,7 +17,33 @@ class ContactContainer extends Component {
   handleSubmit = e => {
     const { nameInput, emailInput, subjectInput, messageInput } = this.state;
     if (nameInput && emailInput && subjectInput && messageInput) {
-      console.log('submit');
+      console.log('wowowoow');
+      const transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+          user: 'ezra.rr.davis@gmail.com',
+          pass: 'BFCE6BB25CEACB3'
+        }
+      });
+
+      const mailOptions = {
+        from: 'ezradavisdev@yahoo.com',
+        to: 'ezra.rr.davis@gmail.com',
+        subject: subjectInput,
+        text: messageInput + `\nEmail: ${emailInput}`
+      };
+      transporter.sendMail(mailOptions, function(error, info) {
+        if (error) {
+          console.log(error);
+        } else {
+          this.setState({
+            nameInput: '',
+            emailInput: '',
+            subjectInput: '',
+            messageInput: ''
+          });
+        }
+      });
     }
   };
   render() {
@@ -72,6 +99,7 @@ class ContactContainer extends Component {
                       ? 'btn'
                       : 'btn-disabled'
                   }
+                  onClick={this.handleSubmit}
                 >
                   Submit
                 </div>
@@ -101,6 +129,9 @@ class ContactContainer extends Component {
           pages={pages}
           pagesHash={pagesHash}
           changeFromContactPage={changeFromContactPage}
+          inputsNotEmpty={
+            !!nameInput || !!emailInput || !!subjectInput || !!messageInput
+          }
         />
       </>
     );

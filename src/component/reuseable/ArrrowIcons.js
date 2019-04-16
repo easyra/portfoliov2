@@ -3,6 +3,9 @@ import { withRouter } from 'react-router-dom';
 
 class ArrowIcons extends Component {
   handleKeyup = e => {
+    if (this.props.inputsNotEmpty) {
+      return;
+    }
     if (e.keyCode && e.keyCode === 37) {
       this.moveLeft();
     } else if (e.keyCode && e.keyCode === 39) {
