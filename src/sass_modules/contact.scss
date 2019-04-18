@@ -15,6 +15,9 @@
       font-weight: bold;
       color: $primary-font;
     }
+    .contact-form{
+      display: none;
+    }
     .contact-inputs{      
       display: flex;
       flex-direction: column;
