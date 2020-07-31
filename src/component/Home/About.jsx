@@ -1,6 +1,7 @@
 import React from "react"
 import { Grid, Typography, makeStyles, Button, Paper } from "@material-ui/core"
 import ezraPic from "../../img/ezra.jpg"
+import links from "../@shared/links"
 const About = () => {
   const classes = useStyles()
   return (
@@ -40,7 +41,7 @@ const About = () => {
         <Button variant="contained" color="secondary">
           Let's Look at My Projects
         </Button>
-        <Button variant="outlined" style={{ marginLeft: 15 }} color="secondary">
+        <Button variant="outlined" style={{ marginLeft: 15 }} color="secondary"  target='__blank' href={links.resume}>
           Resume
         </Button>
       </Grid>
