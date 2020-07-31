@@ -6,6 +6,8 @@ import {
   IconButton,
   createMuiTheme,
   ThemeProvider,
+  Hidden,
+  Button,
 } from "@material-ui/core"
 import LinkedInIcon from "@material-ui/icons/LinkedIn"
 import GitHubIcon from "@material-ui/icons/GitHub"
@@ -23,7 +25,8 @@ const Header = () => {
           Ezra Davis
         </Typography>
         <div>
-          {/* LinkedIn */}
+          <Hidden smUp>
+              {/* LinkedIn */}
           <IconButton size="large" color="secondary">
             <LinkedInIcon />
           </IconButton>
@@ -35,6 +38,13 @@ const Header = () => {
           <IconButton color="secondary">
             <WorkIcon />
           </IconButton>
+          </Hidden>
+          <Hidden xsDown>
+            <Button color='secondary' startIcon={<LinkedInIcon />}>LinkedIn</Button>
+            <Button color='secondary' startIcon={<GitHubIcon />}>Github</Button>
+            <Button color='secondary' startIcon={<WorkIcon />}>Resume</Button>
+          </Hidden>
+        
         </div>
       </Toolbar>
     </AppBar>
