@@ -8,6 +8,7 @@ import {
   Toolbar,
 } from "@material-ui/core"
 import ProjectCard from "./ProjectCard"
+import projectsdata from "./projectsdata"
 
 const Projects = () => {
   const classes = useStyles()
@@ -25,18 +26,16 @@ const Projects = () => {
       </AppBar>
 
       <Grid container justify="space-around">
-        <ProjectCard title="Lambda Notes">
-          Lambda Notes is a note taking application that allows users to
-          organize their information in an efficient manner. Users are able to
-          post notes to a REST API and have those notes be displayed for
-          everyone to see. Lambda Notes also has other features that create a
-          more enjoyable experience for users such as support for premade
-          themes, tagging support for notes, and the ability to search by note
-          title or tag. I created this project using Reactjs, SQLite, Nodejs,
-          and Expressjs.
-        </ProjectCard>
-        <ProjectCard />
-        <ProjectCard />
+        {projectsdata.map(({ stack, title, github, liveSite, text }) => (
+          <ProjectCard
+            title={title}
+            stack={stack}
+            github={github}
+            liveSite={liveSite}
+          >
+            {text}
+          </ProjectCard>       
+        ))}
       </Grid>
     </Box>
   )

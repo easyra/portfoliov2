@@ -15,7 +15,7 @@ import { deepPurple, red } from "@material-ui/core/colors"
 const placeholder =
   "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed consectetur quos qui, dolorum doloremque in?"
 
-const ProjectCard = ({ title = "PlaceHolder", children = placeholder }) => {
+const ProjectCard = ({ title = "PlaceHolder", stack='ReactJS', children = placeholder ,github,liveSite}) => {
   const classes = useStyles()
   console.log(children)
   return (
@@ -27,8 +27,11 @@ const ProjectCard = ({ title = "PlaceHolder", children = placeholder }) => {
             component="iframe"
           />
           <CardContent>
-            <Typography className={classes.title} variant="h6">
+            <Typography color='secondary' className={classes.title} variant="h6">
               {title}
+            </Typography>  
+            <Typography color='secondary' variant="caption">
+              ({stack})
             </Typography>
             <Typography variant="body1">
               {children.split(" ").slice(0, 25).join(" ")}
@@ -39,16 +42,16 @@ const ProjectCard = ({ title = "PlaceHolder", children = placeholder }) => {
         <CardActions>
           <div style={{ flexGrow: 1 }}>
             <Button size="small" color="secondary" variant="contained">
-              Watch Now
+              More
             </Button>
           </div>
 
-          <Button size="small" color="secondary">
+          {github && <Button href={github} target='__blank' size="small" color="secondary">
             GitHub
-          </Button>
-          <Button size="small" color="secondary">
+          </Button>}
+          {liveSite && <Button href={liveSite} target='__blank' size="small" color="secondary">
             Live Site
-          </Button>
+          </Button>}
         </CardActions>
       </Card>
     </Grid>
@@ -64,5 +67,6 @@ const useStyles = makeStyles(theme => ({
   },
   title: {
     fontWeight: "bold",
-  },
+    lineHeight:1  
+},
 }))
