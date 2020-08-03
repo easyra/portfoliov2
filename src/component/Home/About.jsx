@@ -6,7 +6,7 @@ import projectsdata from "../Projects/projectsdata"
 import ProjectModal from "../Projects/ProjectModal"
 const About = () => {
   const classes = useStyles()
-  const [open, setOpen] = useState(true)
+  const [open, setOpen] = useState(false)
   return (
     <>
       <Grid
