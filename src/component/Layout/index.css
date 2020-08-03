@@ -1,0 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+body {
+  margin: 0;
+}
+* {
+  box-sizing: border-box;
+}
+
+.MuiButton-root {
+  font-weight: 800 !important;
+}
