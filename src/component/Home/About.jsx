@@ -1,51 +1,67 @@
-import React from "react"
+import React, { useState } from "react"
 import { Grid, Typography, makeStyles, Button, Paper } from "@material-ui/core"
 import ezraPic from "../../img/ezra.jpg"
 import links from "../@shared/links"
+import projectsdata from "../Projects/projectsdata"
+import ProjectModal from "../Projects/ProjectModal"
 const About = () => {
   const classes = useStyles()
+  const [open, setOpen] = useState(true)
   return (
-    <Grid
-      container
-      justify="center"
-      alignItems="center"
-      style={{ padding: 5, marginBottom: "5%" }}
-    >
-      <Grid item xs={12} sm={8} md={4}>
-        <img
-          className={classes.ezra}
-          src={ezraPic}
-          alt="Ezra Davis | Software Developer"
-        />
-      </Grid>
-      <Grid item xs={12} sm={8} md={4} className={classes.textwrapper}>
-        <Paper elevation={4} className={classes.title}>
-          <Typography
-            variant="h5"
-            component="h1"
-            color="inherit"
-            style={{ fontFamily: "Permanent Marker,cursive" }}
-          >
-            Ezra Davis: Software Developer
-          </Typography>
-        </Paper>
+    <>
+      <Grid
+        container
+        justify="center"
+        alignItems="center"
+        style={{ padding: 5, marginBottom: "5%" }}
+      >
+        <Grid item xs={12} sm={8} md={4}>
+          <img
+            className={classes.ezra}
+            src={ezraPic}
+            alt="Ezra Davis | Software Developer"
+          />
+        </Grid>
+        <Grid item xs={12} sm={8} md={4} className={classes.textwrapper}>
+          <Paper elevation={4} className={classes.title}>
+            <Typography
+              variant="h5"
+              component="h1"
+              color="inherit"
+              style={{ fontFamily: "Permanent Marker,cursive" }}
+            >
+              Ezra Davis: Software Developer
+            </Typography>
+          </Paper>
 
-        <Typography variant="body1" gutterBottom>
-          My name is Ezra Rami-Rennell Davis. I love to code. I love to work. I
-          love to learn. I love to dig hours and hours losing myself in a
-          project. I provide value to every project I'm on. I provide a helping
-          hand to people who are struggling. I'm not afraid to reach out when
-          I'm struggling myself. If you're looking a decent investment in your
-          company, I'm an alright place to start.
-        </Typography>
-        <Button variant="contained" color="secondary" href='#projects'>
-          Let's Look at My Projects
-        </Button>
-        <Button variant="outlined" style={{ marginLeft: 15 }} color="secondary"  target='__blank' href={links.resume}>
-          Resume
-        </Button>
+          <Typography variant="body1" gutterBottom>
+            My name is Ezra Rami-Rennell Davis. I love to code. I love to work.
+            I love to learn. I love to dig hours and hours losing myself in a
+            project. I provide value to every project I'm on. I provide a
+            helping hand to people who are struggling. I'm not afraid to reach
+            out when I'm struggling myself. If you're looking a decent
+            investment in your company, I'm an alright place to start.
+          </Typography>
+          <Button variant="contained" color="secondary" href="#projects" onClick={() => setOpen(true)}>
+            Let's Look at My Projects
+          </Button>
+          <Button
+            variant="outlined"
+            style={{ marginLeft: 15 }}
+            color="secondary"
+            target="__blank"
+            href={links.resume}
+          >
+            Resume
+          </Button>
+        </Grid>
       </Grid>
-    </Grid>
+      <ProjectModal
+        open={open}
+        setOpen={setOpen}
+        next
+      />
+    </>
   )
 }
 

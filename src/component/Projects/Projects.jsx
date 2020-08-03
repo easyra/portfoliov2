@@ -29,17 +29,20 @@ const Projects = () => {
       </AppBar>
 
       <Grid container justify="space-around">
-        {projectsdata.map(({ stack, title, github, liveSite, text,img }) => (
+        {projectsdata.map(({ stack, title, github, liveSite, text,img },i) =>{ 
+          console.log(i)
+          return (
           <ProjectCard
             title={title}
             stack={stack}
             img={img}
             github={github}
             liveSite={liveSite}
+            index={i}
           >
             {text}
           </ProjectCard>       
-        ))}
+        )})}
       </Grid>
     </Box>
  
