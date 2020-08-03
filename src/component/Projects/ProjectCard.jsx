@@ -31,7 +31,7 @@ const ProjectCard = ({
   console.log(children)
   return (
     <>
-      <Grid md={3} xs={12} style={{ margin: 15 }}>
+      <Grid md={3} xs={10} style={{ margin: 15 }}>
         <Card className={classes.card}>
           <CardActionArea onClick={() => setOpen(true)}>
             <CardMedia
@@ -79,6 +79,7 @@ const ProjectCard = ({
               <Button
                 href={liveSite}
                 target="__blank"
+                variant='outlined'
                 size="small"
                 color="secondary"
               >
@@ -111,7 +112,6 @@ const ProjectCard = ({
                 target="__blank"
                 size="small"
                 color="secondary"
-                variant='outlined'
               >
                 GitHub
               </Button>
@@ -151,7 +151,7 @@ const useStyles = makeStyles(theme => ({
     alignItems: "center",
   },
   modalPaper: {
-    margin: "15px auto",
+    margin: 25,
     padding: 15,
     background: theme.primarybg,
     color: "#fff",
