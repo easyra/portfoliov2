@@ -89,7 +89,7 @@ const ProjectCard = ({
           </CardActions>
         </Card>
       </Grid>
-     <ProjectModal open={open} setOpen={setOpen} index={index}/>
+     {open &&<ProjectModal open={open} setOpen={setOpen} index={index}/>}
     </>
   )
 }
