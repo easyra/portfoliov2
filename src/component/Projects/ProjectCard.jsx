@@ -23,7 +23,7 @@ const ProjectCard = ({
   children = placeholder,
   github,
   liveSite,
-  img,
+  img='https://imageog.flaticon.com/icons/png/512/16/16096.png?size=1200x630f&pad=10,10,10,10&ext=png&bg=FFFFFFFF',
 }) => {
   const [open, setOpen] = useState(false)
 
