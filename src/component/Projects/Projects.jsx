@@ -1,4 +1,4 @@
-import React from "react"
+import React , {useState}from "react"
 import {
   Box,
   makeStyles,
@@ -6,6 +6,8 @@ import {
   Typography,
   AppBar,
   Toolbar,
+  Modal,
+  Paper,
 } from "@material-ui/core"
 import ProjectCard from "./ProjectCard"
 import projectsdata from "./projectsdata"
@@ -13,7 +15,8 @@ import projectsdata from "./projectsdata"
 const Projects = () => {
   const classes = useStyles()
   return (
-    <Box className={classes.box} bgcolor="primary.main">
+    <>
+    <Box className={classes.box} id='projects' bgcolor="primary.main">
       <AppBar position="static" elevation={0}>
         <Toolbar>
           <Typography
@@ -26,10 +29,11 @@ const Projects = () => {
       </AppBar>
 
       <Grid container justify="space-around">
-        {projectsdata.map(({ stack, title, github, liveSite, text }) => (
+        {projectsdata.map(({ stack, title, github, liveSite, text,img }) => (
           <ProjectCard
             title={title}
             stack={stack}
+            img={img}
             github={github}
             liveSite={liveSite}
           >
@@ -38,6 +42,8 @@ const Projects = () => {
         ))}
       </Grid>
     </Box>
+ 
+    </>
   )
 }
 

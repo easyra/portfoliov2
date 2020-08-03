@@ -38,7 +38,7 @@ const About = () => {
           I'm struggling myself. If you're looking a decent investment in your
           company, I'm an alright place to start.
         </Typography>
-        <Button variant="contained" color="secondary">
+        <Button variant="contained" color="secondary" href='#projects'>
           Let's Look at My Projects
         </Button>
         <Button variant="outlined" style={{ marginLeft: 15 }} color="secondary"  target='__blank' href={links.resume}>
