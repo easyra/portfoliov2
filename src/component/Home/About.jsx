@@ -86,6 +86,7 @@ const useStyles = makeStyles(theme => ({
     },
   },
   textwrapper: {
+    margin:15, 
     [theme.breakpoints.down("md")]: {
       textAlign: "center",
     },
