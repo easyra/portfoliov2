@@ -113,10 +113,8 @@ const useStyles = makeStyles(theme => ({
     color: "#fff",
     maxWidth: 500,
     width: "100%",
-    height: "100%",
-    minHeight: 500,
-    maxHeight: "80vh",
-    overflowY: "scroll",
+    maxHeight: "90vh",
+    overflowY: "auto",
   },
   text: {
     //   height:'100%',
