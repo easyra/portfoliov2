@@ -28,6 +28,7 @@ import { makeStyles } from "@material-ui/styles"
 import Header from "./Layout/Header"
 import "./Layout/index.css"
 import Footer from "./Layout/Footer"
+import SEO from "./Layout/SEO"
 
 const theme = createMuiTheme({
   palette: {
@@ -43,6 +44,7 @@ const Layout = ({ children }) => {
 
   return (
     <ThemeProvider theme={theme}>
+      <SEO/>
       <div className={classes.bg} />
       <Header />
       <div className={classes.wrapper}>{children}</div>
