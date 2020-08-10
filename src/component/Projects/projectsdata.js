@@ -1,6 +1,7 @@
 import lambdaNotesPic from "./img/lambdanotes.png"
 import mappajob from "./img/mappajob.png"
 import livestream from "./img/livestreampic.jpeg"
+import saintstown from "./img/saintstown.jpg"
 
 export default [
   {
@@ -11,6 +12,16 @@ export default [
     liveSite: "https://lambdanotes-ezra.netlify.com/",
     img: lambdaNotesPic,
   },
+
+  {
+    title: "Livestreamer Site",
+    stack: "Firebase, Realtime Database, ExpressJS, ReactJS, NodeJS",
+    text:
+      "This project is a website that allows a content creator to advertise their content to their fanbase. The website displays a variety of content from the owner’s social media and allows for multiple avenues for fans to financially support said content. Users can subscribe or donate money, keep track of new content being created, and are even capable of signing into a realtime chat room. This site was made using ReactJS as the frontend, and NodeJS/Firebase as the backend, with the FB Realtime Database as the primary database. ",
+    github: "https://github.com/easyra/mockrabbit",
+    liveSite: "https://mockrabbit.netlify.app/",
+    img: livestream,
+  },
   {
     title: "Mappajob",
     stack: "Firebase, Realtime Database, ExpressJS, ReactJS, NodeJS",
@@ -20,12 +31,12 @@ export default [
     img: mappajob,
   },
   {
-    title: "Livestreamer Site",
-    stack: "Firebase, Realtime Database, ExpressJS, ReactJS, NodeJS",
+    title: "Saints Town Production",
+    stack: "ReactJS, GatsbyJS",
     text:
-      "This project is a website that allows a content creator to advertise their content to their fanbase. The website displays a variety of content from the owner’s social media and allows for multiple avenues for fans to financially support said content. Users can subscribe or donate money, keep track of new content being created, and are even capable of signing into a realtime chat room. This site was made using ReactJS as the frontend, and NodeJS/Firebase as the backend, with the FB Realtime Database as the primary database. ",
-    github: "https://github.com/easyra/mockrabbit",
-    liveSite: "https://mockrabbit.netlify.app/",
-    img: livestream,
+      "This is a site for the company Saints Town Productions and the author, Randall Courtland Davis. This site allows users to find information about Randall and his new book, Dear Future Wife. This site includes reviews, excerpts and any future interviews involving the author. As well as some of the previous projects the author has worked on. ",
+    github: "https://github.com/easyra/saintstown-gatsby",
+    liveSite: "https://saintstown.com",
+    img: saintstown,
   },
 ]
