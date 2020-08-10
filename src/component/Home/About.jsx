@@ -39,10 +39,15 @@ const About = () => {
             I love to learn. I love to dig hours and hours losing myself in a
             project. I provide value to every project I'm on. I provide a
             helping hand to people who are struggling. I'm not afraid to reach
-            out when I'm struggling myself. If you're looking a decent
-            investment in your company, I'm an alright place to start.
+            out when I'm struggling myself. If you're looking for a good
+            investment into your company, I'm an alright place to start.
           </Typography>
-          <Button variant="contained" color="secondary" href="#projects" onClick={() => setOpen(true)}>
+          <Button
+            variant="contained"
+            color="secondary"
+            href="#projects"
+            onClick={() => setOpen(true)}
+          >
             Let's Look at My Projects
           </Button>
           <Button
@@ -56,11 +61,7 @@ const About = () => {
           </Button>
         </Grid>
       </Grid>
-      <ProjectModal
-        open={open}
-        setOpen={setOpen}
-        next
-      />
+      <ProjectModal open={open} setOpen={setOpen} next />
     </>
   )
 }
@@ -86,7 +87,7 @@ const useStyles = makeStyles(theme => ({
     },
   },
   textwrapper: {
-    margin:15, 
+    margin: 15,
     [theme.breakpoints.down("md")]: {
       textAlign: "center",
     },
